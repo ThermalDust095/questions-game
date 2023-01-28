@@ -31,9 +31,9 @@
 .user-form{
     position: absolute;
     width: 903px;
-    height: 644px;
+    height: 674px;
     left: 32px;
-    top: 71px;
+    top: 41px;
 
     background: #EDEDED;
     border-radius: 10px;
@@ -58,10 +58,23 @@ background: #D9D9D9;
     top: 159px;
 
     background: #333232;
+    transition: 0.5s;
 }
 
-input[type=text]:focus{
+.username-inp:focus{
+    background: #000000;
+}
+
+input[type=text]{
     color: #EDEDED;
+    /* font-size: 50px; */
+    font-family: 'Georama';
+    font-style: bold;
+    font-weight: 600;
+}
+.username-d input[type=text]{
+    font-size: 50px;
+    padding-left: 10px;
 }
 
 .questions-labl{
@@ -86,6 +99,27 @@ width: 765px;
 height: 203px;
 left: 55px;
 top: 401px;
-
 background: #333232;
+transition: 0.5s;
+}
+
+.questions-inp:focus{
+    background: #000000;
+}
+
+.questions-d textarea[type=text]{
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #EDEDED;
+    font-family: 'Georama';
+    font-style: bold;
+    font-weight: 600;
+
+}
+
+#sub-btn{
+    position: relative;
+    top: 615px;
+    left: 392px;
 }
