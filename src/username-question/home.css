@@ -1,0 +1,91 @@
+.user-form h1{
+    position: absolute;
+    left: 260px;
+    top: 44px;
+
+    font-family: 'Georama';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 53px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.user-form span{
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+}
+
+.home-page{
+    background: url("C:\Users\akhil\OneDrive - dsatm.edu.in\Documents\Akhil\node.js\questions-game\assets\new-bg.jpg");
+    background-size: 1536px 763px;
+    height: 100vh;
+    width: 100%;
+}
+
+.user-form{
+    position: absolute;
+    width: 903px;
+    height: 644px;
+    left: 32px;
+    top: 71px;
+
+    background: #EDEDED;
+    border-radius: 10px;
+}
+
+.username-labl{
+    position: absolute;
+width: 135px;
+height: 104px;
+left: 55px;
+top: 159px;
+text-align: center;
+padding-top: 13px;
+background: #D9D9D9;
+}
+
+.username-inp{
+    position: absolute;
+    width: 630px;
+    height: 104px;
+    left: 191px;
+    top: 159px;
+
+    background: #333232;
+}
+
+input[type=text]:focus{
+    color: #EDEDED;
+}
+
+.questions-labl{
+    position: absolute;
+width: 329px;
+height: 67px;
+left: 52px;
+top: 331px;
+
+font-family: 'Georama';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 43px;
+
+color: #000000;
+}
+
+.questions-inp{
+    position: absolute;
+width: 765px;
+height: 203px;
+left: 55px;
+top: 401px;
+
+background: #333232;
+}
