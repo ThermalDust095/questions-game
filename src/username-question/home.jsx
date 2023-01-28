@@ -51,7 +51,7 @@ class Home extends Component {
                 </div>
                 <textarea className='questions-inp' type="text" value={this.state.question} onChange={this.handleChangeP}></textarea>
             </div>
-            <input id="sub-btn" type="submit" className='btn btn-outline-dark btn-lg' value="submit"/>
+            <input id="sub-btn" type="submit" className='btn btn-outline-dark btn-lg' value="Submit"/>
             </form>
             </div>
             </div>

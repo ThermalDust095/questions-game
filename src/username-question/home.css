@@ -41,6 +41,7 @@
 
 .username-labl{
     position: absolute;
+    font-size: 50px;
 width: 135px;
 height: 104px;
 left: 55px;
@@ -73,7 +74,7 @@ input[type=text]{
     font-weight: 600;
 }
 .username-d input[type=text]{
-    font-size: 50px;
+    font-size: 35px;
     padding-left: 10px;
 }
 
