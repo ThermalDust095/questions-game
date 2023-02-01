@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './home.css'
-import axios from 'axios';
+import serverReq from './RqData';
+
+var sr = new serverReq();
 
 class Home extends Component {
     state = { 
         username : "",
-        question : ""
+        question : "",
+        u_place : "",
+        q_place : ""
      }
     
     handleChangeU=event=>{
@@ -18,21 +22,18 @@ class Home extends Component {
 
     handleSubmit=event=>{
         event.preventDefault(); 
+        if(this.state.username.length>=1 && this.state.question.length>=3){
         console.log(this.state);
-        axios({
-            method:'post',
-            url:'http://127.0.0.1:5000/users/',
-            data:{
-                username: this.state.username,
-                question: this.state.question
-            },
-            headers:{
-                "Content-Type": "application/json"
-            }
-        })
+        this.props.hasSubmit();
+        sr.submitForm(this.state.username,this.state.question);
+        this.setState({username:"",question:""});}
+        else{
+            this.setState({u_place:"Enter a Username",
+                q_place:"Enter a valid Question"});
+        }
     } 
      
-    render() { 
+    render() {
         return (
             <div className='home-page'>
             <div className='user-form'>
@@ -41,7 +42,7 @@ class Home extends Component {
             <div className='username-d'>
                 <div>
                     <span className='username-labl'>@</span>
-                    <input className='username-inp' type="text" value={this.state.username} onChange={this.handleChangeU}></input>
+                    <input className='username-inp' type="text" value={this.state.username} onChange={this.handleChangeU} placeholder={this.state.u_place}></input>
                 </div>
                 {/* <small>It need not be your real name</small> */}
             </div>
@@ -49,7 +50,7 @@ class Home extends Component {
                 <div>
                     <span className='questions-labl'>Questions:</span>
                 </div>
-                <textarea className='questions-inp' type="text" value={this.state.question} onChange={this.handleChangeP}></textarea>
+                <textarea className='questions-inp' type="text" value={this.state.question} onChange={this.handleChangeP} placeholder={this.state.q_place}></textarea>
             </div>
             <input id="sub-btn" type="submit" className='btn btn-outline-dark btn-lg' value="Submit"/>
             </form>
